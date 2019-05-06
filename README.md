@@ -77,5 +77,16 @@ execute 'redLstSize Your_Listing_File_Name.lst l=true';
 When you're debugging your model, and you would like to check if the correct set
 elements are entering an equation, it is recommended to disable this feature.
 
+## Building
+Clone/Fork this repo, then
+```
+npm install
+```
+followed by
+```
+nexe redLstSize.js
+```
+which will build an executable for your current OS.
+
 ## License
 MIT
