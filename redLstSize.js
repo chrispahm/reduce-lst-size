@@ -11,7 +11,7 @@ if (!file) {
 const writeFile = util.promisify(fs.writeFile)
 
 const rl = readline.createInterface({
-  input: fs.createReadStream(`${__dirname}/${process.argv[2]}`),
+  input: fs.createReadStream(process.argv[2]),
   crlfDelay: Infinity
 })
 
@@ -82,7 +82,7 @@ rl.on('line', (line) => {
 
 rl.on('close', async () => {
   try {
-    await writeFile(`${__dirname}/${process.argv[2]}`, data, 'utf8')
+    await writeFile(process.argv[2], data, 'utf8')
   } catch (e) {
     console.log(e)
     process.exit(1)
