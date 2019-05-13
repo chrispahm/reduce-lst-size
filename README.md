@@ -55,6 +55,12 @@ Then, at the end of your main GAMS model file, put
 execute 'redLstSize Your_Listing_File_Name.lst';
 ```
 
+In some occasions, GAMS may not be finished writing to the `.lst` file when `reduce-lst-size` is called. In those cases, the `.lst` can end up with long empty lines.
+You can circumvent this by using the `async` version of the `execute` function
+```GAMS
+execute.async 'redLstSize Your_Listing_File_Name.lst';
+```
+
 ## Options
 By default, `redLstSize` will filter out all lines in a variable/equation block, where
 either the **level** or **marginal** value is zero/EPS.
