@@ -47,6 +47,11 @@ calves45      .2010.          .             0.7500         1.0000          .
 
 Depending on your model, this can significantly reduce the size of the listing file, and ease readibility of the output.
 
+## Installation
+Download the `.zip` file from the [releases page](https://github.com/chrispahm/reduce-lst-size/releases), and place the `redLstSize.exe`
+into your GAMS installation path (default: `C:/GAMS/*Version*/*/`).
+Alternatively, you can build from source, as described below.
+
 ## Usage
 Download a relase from the relase tab and either place it in your models main directory (where your GAMS entry file is)
 or in the GAMS system directory (if you want to use it on multiple models).
